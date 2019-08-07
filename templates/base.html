@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ua">
+    <head>
+        <meta charset="utf-8">
+
+        {% block head %}{% endblock %}
+    </head>
+
+    <body>
+    <ul>
+        <li><a href="{{ url_for('main.index') }}">Головна</a>
+        <li><a href="{{ url_for('main.recreate') }}">Перестворити Базу даних</a>
+        <li><a href="{{ url_for('main.xlsx') }}">Додати дані з xlsx-файлу</a>
+        <li><a href="{{ url_for('main.moysklad_api') }}">Додати дані з moysklad.ru</a>
+    </ul>
+    <hr>
+
+        {% block content %}{% endblock %}
+    </body>
+</html>

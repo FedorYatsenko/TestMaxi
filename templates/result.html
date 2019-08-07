@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Результат</title>
+{% endblock %}
+
+{% block content %}
+    {{ message }}
+    <hr>
+
+    <ul>
+    {% for f in fails %}
+        <li>{{ f }}
+    {% endfor %}
+    </ul>
+{% endblock %}

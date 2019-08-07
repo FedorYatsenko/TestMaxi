@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Головна</title>
+{% endblock %}
+
+{% block content %}
+    {{ message }}
+
+    <hr>
+    <table cellpadding="10">
+       <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>description</th>
+        <th>moment</th>
+        <th>sum</th>
+        <th>counterparty_uuid</th>
+       </tr>
+        {% for o in orders %}
+           <tr>
+               <td>{{ o['id'] }}</td>
+               <td>{{ o['name'] }}</td>
+               <td>{{ o['description'] }}</td>
+               <td>{{ o['moment'] }}</td>
+               <td>{{ o['sum'] }}</td>
+               <td>{{ o['counterparty_uuid'] }}</td>
+           </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+    <table cellpadding="10">
+       <tr>
+        <th>counterparty_uuid</th>
+        <th>name</th>
+       </tr>
+        {% for c in counterparties %}
+           <tr>
+               <td>{{ c['counterparty_uuid'] }}</td>
+               <td>{{ c['name'] }}</td>
+           </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
