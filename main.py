@@ -35,7 +35,7 @@ def xlsx():
     fails = []
     successfully_count = 0
 
-    book = xlrd.open_workbook("../AzureTables.xlsx")
+    book = xlrd.open_workbook("AzureTables.xlsx")
 
     sheet = book.sheet_by_name("counterparty")
     for r in range(1, sheet.nrows):
